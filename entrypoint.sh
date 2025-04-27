@@ -20,5 +20,5 @@ mcp:
   mcpServers: '$MCP_SERVERS'
 EOF
 
-# 启动python3 main.py 并指定config.yaml文件
-/bin/python3.12 main.py --config $config
+# 启动python main.py 并指定config.yaml文件
+python main.py --config $config
