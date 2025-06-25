@@ -1,10 +1,6 @@
 # mcp-client-dingtalk
 
-  
-
 一个用于钉钉机器人对话的mcp-cloud工具
-
-  
 
 ## 1.钉钉卡片模版创建
 
@@ -24,7 +20,6 @@ https://open.dingtalk.com/document/isvapp/card-template-building-and-publishing
 
 #### 2.1.配置环境变量
 
-
 ```shell
 export RDB_HOST=xxxxxxx                                                                                                                                                                                                                    
 export RDB_PORT=xxxxxxx                                                                                                                                                                                                                    
@@ -38,8 +33,6 @@ export DINGTALK_CARD_TEMPLATE_ID_CALL_TOOLS=xxxxxxx
 export MCP_SERVER_0_NAME=xxxxxxx                                                                                                                                                                                                           
 export MCP_SERVER_0_URL=xxxxxxx
 ```
-
-
 #### 2.2.安装Python
 
 ```bash

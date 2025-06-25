@@ -16,5 +16,5 @@ docker run -d --name mcp-client-dingtalk \
 -e DINGTALK_CARD_TEMPLATE_ID_CALL_TOOLS=${DINGTALK_CARD_TEMPLATE_ID_CALL_TOOLS} \
 -e MCP_SERVER_0_NAME=${MCP_SERVER_0_NAME} \
 -e MCP_SERVER_0_URL=${MCP_SERVER_0_URL} \
-mcp-client-dingtalk
 
+mcp-client-dingtalk
