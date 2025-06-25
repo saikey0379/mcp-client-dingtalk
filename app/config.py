@@ -51,7 +51,6 @@ class Config:
         self.config = self.parse_yaml(config_file_path)
         self.log = None if "log" not in self.config else self.config["log"]
         self.rdb = None if "rdb" not in self.config else self.config["rdb"]
-        self.ai_keys = None if "ai-keys" not in self.config else self.config["ai-keys"]
         self.mcp = None if "mcp" not in self.config else self.config["mcp"]
         self.dingtalk = None if "dingtalk" not in self.config else self.config["dingtalk"]
 
