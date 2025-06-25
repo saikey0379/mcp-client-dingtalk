@@ -1,7 +1,9 @@
 # 导入ai客户端常量
-from src.ai_clients.const import AI_PROVIDER_OPENAI, AI_PROVIDER_DEEPSEEK
+from ai_clients.model.const import AI_PROVIDER_OPENAI, AI_PROVIDER_DEEPSEEK
 
 # 获取提供者 根据模型名称
+
+
 def GetProviderByModel(model_name: str) -> str:
     # 模型到提供者的映射
     model_to_provider = {
@@ -16,4 +18,3 @@ def GetProviderByModel(model_name: str) -> str:
     provider = model_to_provider.get(model_name, None)
     # 返回提供者
     return provider
-
