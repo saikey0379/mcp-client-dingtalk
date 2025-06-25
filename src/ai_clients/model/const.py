@@ -1,0 +1,3 @@
+
+AI_PROVIDER_OPENAI = "openai"
+AI_PROVIDER_DEEPSEEK = "deepseek"
