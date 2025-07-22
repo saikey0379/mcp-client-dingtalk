@@ -12,7 +12,6 @@ class ClientAIBase(ABC):
         # 创建客户端
         self.client = None
 
-    # TODO: 获取工具调用
     @abstractmethod
-    def get_response_tool_calls(self, user_model: str, query: str, available_tools: list):
+    async def get_response_ai_calls_async(self, user_model: str, messages: list, available_tools: list):
         pass

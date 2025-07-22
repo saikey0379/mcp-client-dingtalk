@@ -6,6 +6,8 @@ dist/
 wheels/
 *.egg-info
 config.yaml
+.env
+.cursorignore
 
 # Virtual environments
 venv/
