@@ -4,6 +4,7 @@ ADD . /app
 
 WORKDIR /app
 
-RUN pip install -r /app/requirements.txt --no-cache-dir
+RUN pip install --upgrade pip -i https://mirrors.aliyun.com/pypi/simple/ && \
+    pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 
 CMD ["/bin/bash", "entrypoint.sh"]
