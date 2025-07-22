@@ -2,7 +2,7 @@
 import logging
 
 # 导入配置
-from app.config import appConfig
+from app.config import app_config
 # 导入常量
 from app.const import DEFAULT_LOG_LEVEL, DEFAULT_LOG_FORMATTER
 
@@ -61,4 +61,4 @@ class Logger:
         }
 
 
-appLogger = Logger(appConfig.config["log"])
+app_logger = Logger(app_config.config["log"])

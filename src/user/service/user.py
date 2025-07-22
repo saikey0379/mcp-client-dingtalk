@@ -26,11 +26,23 @@ class ServiceUser():
     def get_user_client_ai(self, user_id: str):
         return self.client_user.get_user_client_ai(user_id)
 
+    def get_user_client_ai_async(self, user_id: str):
+        return self.client_user.get_user_client_ai_async(user_id)
+
     def get_user_chat_history(self, user_id: str):
         return self.client_user.get_user_chat_history(user_id)
 
     def append_user_chat_history(self, user_id: str, message: dict):
         return self.client_user.append_user_chat_history(user_id, message)
+
+    def get_user_mcp_tasks(self, user_id: str):
+        return self.client_user.get_user_mcp_tasks(user_id)
+
+    def set_user_mcp_tasks(self, user_id: str, tasks: list):
+        return self.client_user.set_user_mcp_tasks(user_id, tasks)
+
+    def custom_mcp_task(self, user_id: str):
+        return self.client_user.custom_mcp_task(user_id)
 
 
 def NewServiceUser(client_user: ClientUser):

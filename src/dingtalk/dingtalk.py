@@ -1,4 +1,3 @@
-
 # 导入 dingtalk_stream 模块
 import dingtalk_stream
 
@@ -8,12 +7,13 @@ from src.dingtalk.handle import ChatBotHandler, CardCallbackHandler
 
 class NewDingTalk:
     # 初始化
-    def __init__(self, logger, client_id: str, client_secret: str, card_template_id_user_config: str, card_template_id_call_tools: str):
+    def __init__(self, logger, client_id: str, client_secret: str, card_template_id_user_config: str, card_template_id_call_tools: str, card_template_id_ai_result: str):
         # 获取配置
         self.client_id = client_id
         self.client_secret = client_secret
         self.card_template_id_user_config = card_template_id_user_config
         self.card_template_id_call_tools = card_template_id_call_tools
+        self.card_template_id_ai_result = card_template_id_ai_result
 
         # 创建钉钉客户端
         self.logger = logger
@@ -33,12 +33,12 @@ class NewDingTalk:
 
     def register_callback_handler(self):
         chatbot_handler = ChatBotHandler(
-            self.logger, self.card_template_id_user_config, self.card_template_id_call_tools)
+            self.logger, self.client, self.card_template_id_user_config, self.card_template_id_call_tools, self.card_template_id_ai_result)
 
         self.client.register_callback_handler(
             dingtalk_stream.ChatbotMessage.TOPIC, chatbot_handler
         )
         self.client.register_callback_handler(
             dingtalk_stream.CallbackHandler.TOPIC_CARD_CALLBACK, CardCallbackHandler(
-                self.logger, self.client,  chatbot_handler)
+                self.logger, self.client, self.card_template_id_call_tools, self.card_template_id_ai_result, chatbot_handler)
         )

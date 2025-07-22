@@ -21,6 +21,12 @@ dingtalk:
   client_secret: "$DINGTALK_CLIENT_SECRET"
   card_template_id_user_config: "$DINGTALK_CARD_TEMPLATE_ID_USER_CONFIG"
   card_template_id_call_tools: "$DINGTALK_CARD_TEMPLATE_ID_CALL_TOOLS"
+  card_template_id_ai_result: "$DINGTALK_CARD_TEMPLATE_ID_AI_RESULT"
+
+ai-keys:
+  openai:
+    api_key: "$AI_OPENAI_API_KEY"
+    api_base: "$AI_OPENAI_API_BASE"
 
 mcp:
   mcpServers:

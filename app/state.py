@@ -2,10 +2,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-from app.logger import appLogger
-from app.config import appConfig, GenerateRDBUrl
+from app.logger import app_logger
+from app.config import app_config, GenerateRDBUrl
 
-from src.mcp.management import appMCPClient
+from src.mcp.management import app_mcp_client
 from src.mcp.service.mcp import NewMCPService
 
 from src.user.io.user import NewClientUser
@@ -51,8 +51,8 @@ class State():
             self.logger, self.client_user, self.mcp_client, self.service_card)
 
 
-appState = State(
-    appLogger.logger,
-    appConfig,
-    appMCPClient,
+app_state = State(
+    app_logger.logger,
+    app_config,
+    app_mcp_client,
 )

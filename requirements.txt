@@ -9,6 +9,7 @@ charset-normalizer==3.4.2
 click==8.2.1
 dingtalk-stream==0.24.2
 distro==1.9.0
+Flask==3.1.1
 frozenlist==1.7.0
 greenlet==3.2.3
 h11==0.16.0
